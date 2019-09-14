@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="leaf.svg">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect834"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect832"
+       is_visible="true"
+       steps="1"
+       threshold="0.0174407"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect828"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect826"
+       is_visible="true"
+       steps="1"
+       threshold="0.0174407"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect940"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect936"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect928"
+       is_visible="true" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.2720372"
+     inkscape:cx="30.504382"
+     inkscape:cy="61.709824"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1006"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:snap-center="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-270.54165)">
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.37795275;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="M 50 0 A 50.000011 49.999979 0 0 0 0 50 A 50.000011 49.999979 0 0 0 50 100 A 50.000011 49.999979 0 0 0 100 50 A 50.000011 49.999979 0 0 0 50 0 z "
+       id="rect954"
+       transform="matrix(0.26458333,0,0,0.26458333,0,270.54165)" />
+    <path
+       style="fill:#00ff00;stroke:none;stroke-width:1.18962991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 50 0 A 49.999994 50.000019 0 0 0 2.2421875 35.205078 C 8.3879468 41.535948 18.109485 53.710415 22.310547 58.101562 C 25.516073 61.452115 28.612653 64.923607 32.111328 67.966797 C 35.610003 71.009987 39.560302 73.639146 43.988281 75.015625 C 49.025953 76.58162 54.44835 76.456483 59.666016 75.677734 C 64.883681 74.898941 69.983859 73.487248 75.167969 72.509766 C 77.825966 72.00857 80.510153 71.619938 83.119141 70.90625 C 85.728133 70.192607 88.286559 69.133782 90.388672 67.431641 C 92.49079 65.729544 94.109237 63.32936 94.496094 60.652344 C 94.689526 59.313858 94.571231 57.924504 94.101562 56.65625 C 93.631899 55.387996 92.80584 54.245264 91.716797 53.443359 C 90.098043 52.251451 88.038406 51.876309 86.054688 51.550781 C 84.070969 51.225343 82.010336 50.888552 80.349609 49.755859 C 78.533349 48.517056 77.067841 46.479972 76.828125 44.339844 C 75.866129 35.751365 80.268256 24.217844 85.011719 14.367188 A 49.999994 50.000019 0 0 0 50 0 z "
+       id="path824"
+       transform="matrix(0.26458333,0,0,0.26458333,0,270.54165)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot942"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:5.33333333px;line-height:1.25;letter-spacing:0px;word-spacing:0px;text-anchor:middle;text-align:center;"><flowRegion
+         id="flowRegion944"
+         style="text-anchor:middle;text-align:center;"><rect
+           id="rect946"
+           width="100"
+           height="100"
+           x="0"
+           y="0"
+           style="text-anchor:middle;text-align:center;" /></flowRegion><flowPara
+         id="flowPara948" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:1.41111112px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.1"
+       x="13.223655"
+       y="285.9549"
+       id="text952"><tspan
+         sodipodi:role="line"
+         id="tspan950"
+         x="13.223655"
+         y="285.9549"
+         style="font-size:6px;fill:#ffffff;stroke-width:0.1">hey</tspan></text>
+  </g>
+</svg>
