@@ -10,6 +10,8 @@ pytest = "*"
 
 [packages]
 fire = "*"
+cairosvg = "*"
+cairosvgsource = "*"
 
 [requires]
 python_version = "3.7"

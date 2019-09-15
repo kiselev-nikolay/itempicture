@@ -1,13 +1,15 @@
 from typing import List, Union, Iterable
-
-COLOR_TEMPLATE = 'hsl({hue}, {value}%, {value}%)'
+import colorsys
 
 
 def hsl_color(value: float, hue: Union[int, float], step: int) -> str:
-    if isinstance(hue, float):
-        hue *= 360
-    return COLOR_TEMPLATE.format(hue=hue,
-                                 value=39 + ((value % step) * 5))
+    if isinstance(hue, int):
+        hue /= 360
+    value = 49 + ((value % step) * 5)
+    value /= 100
+    rgb = colorsys.hls_to_rgb(hue, value, value)
+    rgb = tuple(int(c * 255) for c in rgb)
+    return '#%02x%02x%02x' % tuple(rgb)
 
 
 def generate_color_groups(colors: List[float], steps: int) -> Iterable[str]:
