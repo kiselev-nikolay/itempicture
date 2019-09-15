@@ -1,22 +1,26 @@
-import itertools
-from typing import List
+from typing import List, Union, Iterable
 
 COLOR_TEMPLATE = 'hsl({hue}, {value}%, {value}%)'
 
 
-def color(value: float, hue: float, step: int) -> str:
-    return COLOR_TEMPLATE.format(hue=hue * 360,
+def hsl_color(value: float, hue: Union[int, float], step: int) -> str:
+    if isinstance(hue, float):
+        hue *= 360
+    return COLOR_TEMPLATE.format(hue=hue,
                                  value=39 + ((value % step) * 5))
 
 
-def generate_colorpairs(colors: List[float]):
-    i = 0
-    colors_generator = itertools.cycle(colors)
+def generate_color_groups(colors: List[float], steps: int) -> Iterable[str]:
     while True:
-        yield color(i, next(colors_generator), len(colors))
-        i += 1
+        for color in colors:
+            for i in range(steps):
+                yield hsl_color(i, color, steps)
 
 
 def test_generator() -> None:
-    for hsl_string in itertools.islice(generate_colorpairs([.5, .5]), 10):
-        print(hsl_string)
+    import itertools
+    hsl_strings = []
+    color_generator = generate_color_groups(range(0, 360, 10), 3)
+    for hsl_string in itertools.islice(color_generator, 360):
+        hsl_strings.append(hsl_string)
+    assert len(set(hsl_strings)) == 36 * 3
