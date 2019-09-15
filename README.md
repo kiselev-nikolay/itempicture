@@ -8,6 +8,11 @@ Application for generate images in same style with titles
 
 `pip install itempicture`
 
-`itempicture example/circle.svg py`
+`itempicture --help`
 
-![Result](http://not.yet/image.png)
+`itempicture examples/leaf.svg --colors_count=2 --text=Py`
+
+## Exapmle
+![Result](https://github.com/machineandme/itempicture/raw/master/examples/demo_png/r1.png)
+![Result](https://github.com/machineandme/itempicture/raw/master/examples/demo_png/r2.png)
+![Result](https://github.com/machineandme/itempicture/raw/master/examples/demo_png/r3.png)

@@ -23,6 +23,6 @@ def process_template(input_path: str,
 
 def test_process_template() -> None:
     svg = process_template('examples/leaf.svg', [190, 170], 'yeh', 'hey')
-    assert 'hsl(190' in svg.toxml()
+    assert '#3fbaa5' in svg.toxml()
     assert 'hey' not in svg.toxml()
     assert 'yeh' in svg.toxml()

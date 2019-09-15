@@ -18,7 +18,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as file:
 
 setup(
     name='itempicture',
-    version='0.0.3',
+    version='0.1.0',
     description='Application for generate images in same style with titles',
     long_description=long_description,
     long_description_content_type='text/markdown',
