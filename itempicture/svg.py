@@ -1,7 +1,7 @@
 from xml.dom.minidom import parse
 from xml.dom.minidom import Element
 from functools import partial
-from typing import Iterator, Tuple
+from typing import Iterator, Callable
 
 
 def read_tree(file_path: str) -> Element:
@@ -17,7 +17,7 @@ def iter_element(svg: Element, name: str) -> Iterator[Element]:
         yield element
 
 
-def edit_fill(fill_color: str, element: Element) -> str:
+def edit_fill(fill_color: str, element: Element) -> None:
     style = element.getAttribute('style')
     new_style = []
     for css in style.split(';'):
@@ -29,30 +29,44 @@ def edit_fill(fill_color: str, element: Element) -> str:
     element.setAttribute('style', ';'.join(new_style))
 
 
-def edit_text(text: str, element: Element):
-    element.nodeValue = text
-    breakpoint()
+def find_text_node(element: Element) -> Element:
+    text_nodes = []
+    for paragraph in element.childNodes:
+        # If the text has no nesting, it always has just one element
+        if paragraph.nodeName == '#text':
+            return paragraph
+        elif paragraph.hasChildNodes():
+            text_nodes.append(find_text_node(paragraph))
+    return text_nodes
 
 
-def iter_paths(svg):
+def edit_text(text: str, element: Element,
+              change_only: str = None) -> None:
+    text_nodes = find_text_node(element)
+    for text_node in text_nodes:
+        if not change_only \
+           or text_node.nodeValue.strip() == change_only.strip():
+            text_node.nodeValue = text
+
+
+def iter_paths(svg: Element) -> Iterator[Callable]:
     for path in iter_element(svg, 'path'):
         editor = partial(edit_fill, element=path)
         yield editor
 
 
-def iter_texts(svg):
+def iter_texts(svg: Element) -> Iterator[Callable]:
     for text in iter_element(svg, 'text'):
         editor = partial(edit_text, element=text)
         yield editor
 
 
-def test_read_tree():
+def test_read_tree() -> None:
     svg = read_tree('examples/leaf.svg')
-    for p in iter_paths(svg):
-        p('#afaf00')
+    for i, p in enumerate(iter_paths(svg)):
+        p(['#ff1111', "#00bebe"][i])
     for t in iter_texts(svg):
-        t('bing-bong')
+        t('yes!')
     assert svg
-    with open('test.svg', 'w') as file:
-        svg.writexml(file)
-    breakpoint()
+    assert 'yes!' in svg.toxml()
+    assert '#00bebe' in svg.toxml()

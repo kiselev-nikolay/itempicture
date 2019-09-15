@@ -1,4 +1,3 @@
-import random
 import itertools
 from typing import List
 
@@ -13,11 +12,11 @@ def color(value: float, hue: float, step: int) -> str:
 def generate_colorpairs(colors: List[float]):
     i = 0
     colors_generator = itertools.cycle(colors)
-    while i < 9:
+    while True:
         yield color(i, next(colors_generator), len(colors))
         i += 1
 
 
-def test_generator():
-    for hsl_string in generate_colorpairs([.5, .5]):
+def test_generator() -> None:
+    for hsl_string in itertools.islice(generate_colorpairs([.5, .5]), 10):
         print(hsl_string)

@@ -69,7 +69,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="6.2720372"
-     inkscape:cx="30.504382"
+     inkscape:cx="-0.74543265"
      inkscape:cy="61.709824"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -101,7 +101,7 @@
      id="layer1"
      transform="translate(0,-270.54165)">
     <path
-       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.37795275;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.37795275;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
        d="M 50 0 A 50.000011 49.999979 0 0 0 0 50 A 50.000011 49.999979 0 0 0 50 100 A 50.000011 49.999979 0 0 0 100 50 A 50.000011 49.999979 0 0 0 50 0 z "
        id="rect954"
        transform="matrix(0.26458333,0,0,0.26458333,0,270.54165)" />
