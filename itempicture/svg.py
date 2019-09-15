@@ -17,7 +17,7 @@ def iter_element(svg: Element, name: str) -> Iterator[Element]:
         yield element
 
 
-def edit_fill(fill_color: str, element: Element) -> None:
+def edit_fill(element: Element, fill_color: str) -> None:
     style = element.getAttribute('style')
     new_style = []
     for css in style.split(';'):
@@ -40,7 +40,7 @@ def find_text_node(element: Element) -> Element:
     return text_nodes
 
 
-def edit_text(text: str, element: Element,
+def edit_text(element: Element, text: str,
               change_only: str = None) -> None:
     text_nodes = find_text_node(element)
     for text_node in text_nodes:
@@ -51,22 +51,22 @@ def edit_text(text: str, element: Element,
 
 def iter_paths(svg: Element) -> Iterator[Callable]:
     for path in iter_element(svg, 'path'):
-        editor = partial(edit_fill, element=path)
+        editor = partial(edit_fill, path)
         yield editor
 
 
 def iter_texts(svg: Element) -> Iterator[Callable]:
     for text in iter_element(svg, 'text'):
-        editor = partial(edit_text, element=text)
+        editor = partial(edit_text, text)
         yield editor
 
 
 def test_read_tree() -> None:
     svg = read_tree('examples/leaf.svg')
-    for i, p in enumerate(iter_paths(svg)):
-        p(['#ff1111', "#00bebe"][i])
-    for t in iter_texts(svg):
-        t('yes!')
+    for i, edit_path_node in enumerate(iter_paths(svg)):
+        edit_path_node(['#ff1111', "#00bebe"][i])
+    for edit_text_node in iter_texts(svg):
+        edit_text_node('yes!')
     assert svg
     assert 'yes!' in svg.toxml()
     assert '#00bebe' in svg.toxml()

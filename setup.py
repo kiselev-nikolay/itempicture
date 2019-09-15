@@ -54,7 +54,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'itempicture=itempicture:cli',
+            'itempicture=itempicture.cli',
         ],
     },
     project_urls={
