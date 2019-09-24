@@ -1,3 +1,5 @@
+"""Command line interface for itempicture module."""
+
 import random
 from fire import Fire
 from .processor import process_template
@@ -10,7 +12,7 @@ def cli(input_template: str,
         text: str = None,
         change_only_text: str = None,
         output: str = 'result.png'):
-    """ Generate image from svg template """
+    """Generate image from svg template."""
     colors = [random.random() for _ in range(colors_count)]
     svg = process_template(input_template, colors, text, change_only_text)
     if output[-3:] == 'svg':
@@ -25,4 +27,5 @@ def cli(input_template: str,
 
 
 def main():
+    """Run command line interface applications."""
     Fire(cli)

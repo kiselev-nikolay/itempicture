@@ -5,4 +5,4 @@ install:
 - pipenv install --dev
 script:
 - pipenv run flake8 itempicture/*
-- pipenv run pytest itempicture/*
+- pipenv run pytest test.py
